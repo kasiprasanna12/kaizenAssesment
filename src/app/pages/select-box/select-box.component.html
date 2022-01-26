@@ -1,0 +1,17 @@
+<div class="select-box">
+    <h1>Select the Box</h1>
+    <ul>
+        <li *ngFor="let data of boxes">
+            <div class="box">
+                {{data}}
+            </div>
+            <div class="dropdown">
+                <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name"
+	[showClear]="true"></p-dropdown>
+            </div>
+        </li>        
+    </ul>
+    <button (click)="onDropDownSelect()">Navigate to Table</button>
+</div>
+
+
